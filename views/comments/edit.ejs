@@ -1,0 +1,19 @@
+<% include ../partials/header %>
+<div class="ui text main container segment">
+    <h2 class="ui header">edit comment on <%=bike.name%></h2>
+
+    <div class="ui comments">
+        <form class="ui reply form" action="/bikes/<%=bike._id%>/comments/<%=comment._id%>?_method=put"  method="POST" >
+            <div class="field">
+              <textarea name="comment[text]"  >edit <%=comment.text%></textarea>
+            </div>
+            <div class="ui primary submit labeled icon button">
+              <i class="icon edit"></i> <button class="ui blue button"> edit Comment</button>
+            </div>
+          </form>
+
+    </div>
+</div>
+
+
+<% include ../partials/footer %>

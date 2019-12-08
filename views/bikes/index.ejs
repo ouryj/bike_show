@@ -1,0 +1,16 @@
+<%include ../partials/header %>
+<div class="ui text main container segment">
+    <a href="/bikes/new" class="ui link">share your bike</a>
+    <% if(bikes && bikes.length >0){ %>
+    <div class="ui segment">
+        <%bikes.forEach(function(bike){ %>
+            <h1 class="ui header"><%=bike.name%></h1>
+            <img src="<%=bike.image%>" alt="" class="ui fluid image">
+            <a href="/bikes/<%=bike._id%>" class="ui blue button">More Info</a>
+
+       <% })%>
+    </div>
+    <%}%>
+</div>
+
+<%include ../partials/footer %>

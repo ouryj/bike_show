@@ -1,0 +1,23 @@
+<%include ../partials/header %>
+<div class="ui text main container segment">
+    <h1 class="ui header">share your bike below</h1>
+    <form class="ui form" action="/bikes" method="POST">
+        <div class="field">
+          <label>bike name</label>
+          <input type="text" name="name" placeholder="enter bike name">
+        </div>
+        <div class="field">
+          <label>bike model</label>
+          <input type="text" name="model" placeholder="enter bike model">
+        </div>
+        <div class="field">
+                <label>bike image</label>
+                <input type="text" name="image" placeholder="enter bike photo">
+              </div>
+
+  
+        <button class="ui green button" type="submit">Share</button>
+      </form>
+</div>
+
+<%include ../partials/footer %>

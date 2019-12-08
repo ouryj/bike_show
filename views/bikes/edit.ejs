@@ -1,0 +1,23 @@
+<%include ../partials/header %>
+<div class="ui text main container segment">
+    <h1 class="ui header">edit <%=bike.name%></h1>
+    <form class="ui form" action="/bikes/<%=bike._id%>?_method=put" method="POST">
+        <div class="field">
+          <label>bike name</label>
+          <input type="text" name="bike[name]" value="<%=bike.name%>">
+        </div>
+        <div class="field">
+          <label>bike model</label>
+          <input type="text" name="bike[model]" value="<%=bike.model%>">
+        </div>
+        <div class="field">
+                <label>bike image</label>
+                <input type="text" name="bike[image]" value="<%=bike.image%>">
+              </div>
+
+  
+        <button class="ui green button" type="submit">Update</button>
+      </form>
+</div>
+
+<%include ../partials/footer %>
